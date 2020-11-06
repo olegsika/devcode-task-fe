@@ -1,0 +1,26 @@
+.movies-container {
+  display: flex;
+  flex-direction: column;
+
+  .movie-card {
+    width: 50%;
+    margin: 1rem auto auto;
+
+    mat-card.mat-elevation-z4 {
+      text-align: center;
+
+      p.movie-id {
+        display: none;
+      }
+
+      mat-card-header {
+        display: block;
+      }
+
+      mat-card-content {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+}

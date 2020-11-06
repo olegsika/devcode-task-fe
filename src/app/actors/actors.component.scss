@@ -1,0 +1,26 @@
+.actors-container {
+  display: flex;
+  flex-direction: column;
+
+  .actor-card {
+    width: 50%;
+    margin: 1rem auto auto;
+
+    mat-card.mat-elevation-z4 {
+      text-align: center;
+
+      p.actor-id {
+        display: none;
+      }
+
+      mat-card-header {
+        display: block;
+      }
+
+      mat-card-content {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<div>
+  <h2>
+    {{title}}
+  </h2>
+  <form [formGroup]="newActor" (submit)="addNewActor()">
+    <div class="form-group">
+      <mat-form-field appearance="outline" class="info-form-field">
+        <mat-label>Actor Name</mat-label>
+        <input
+          matInput
+          formControlName="name"
+          placeholder="Actor Name"/>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" class="save-info" type="submit"
+            [disabled]="!newActor.valid">
+      Save Product
+    </button>
+  </form>
+</div>

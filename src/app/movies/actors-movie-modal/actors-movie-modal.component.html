@@ -1,0 +1,25 @@
+<div>
+  <div>
+      <mat-select *ngFor="let actor of allActors" (valueChange)="addActorToFilm($event)">
+        <mat-option [value]="actor">{{actor.name}}</mat-option>
+      </mat-select>
+  </div>
+  <div *ngIf="data.actors && data.actors.length > 0; else elseblock">
+    <div class="actors-list" *ngFor="let actor of data.actors">
+      <div class="actor-card">
+        <mat-card class="mat-elevation-z4">
+          <p class="actor-id">{{actor.id}}</p>
+          <mat-card-header>
+            <mat-card-title>{{actor.name}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <button class="delete-button" mat-raised-button color="warn" (click)="deleteActor(actor.id)">Delete Actor</button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <ng-template #elseblock>
+    <h3>No actors assigned for this film</h3>
+  </ng-template>
+</div>
